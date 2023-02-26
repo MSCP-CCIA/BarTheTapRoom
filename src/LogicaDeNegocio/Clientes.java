@@ -1,4 +1,4 @@
 package LogicaDeNegocio;
 
-public class d {
+public class Clientes {
 }
