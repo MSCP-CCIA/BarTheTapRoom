@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9fb2048-8273-48eb-b60b-24ab2895ca33" name="Changes" comment="CLASE TOTAL Y SUBTOTAL">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" afterDir="false" />
@@ -39,6 +41,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "271",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/cracm/OneDrive - Universidad Sergio Arboleda/UNIVERSIDAD SERGIO ARBOLEDA - CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL/TERCER SEMESTRE/ESTRUCTURAS DE DATOS LINEALES/ListasEncadenadasDatosClima",

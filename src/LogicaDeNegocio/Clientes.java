@@ -9,7 +9,7 @@ public class Clientes {
     private String correoCliente;
     public String CrearCliente() {
         ConexionClientes objmod = new ConexionClientes();
-        String cad = "insert into articulo values('"
+        String cad = "insert into clientes values('"
                 + getCodigoCliente() + "','" + this.getNombreCliente()
                 + "','" + this.getApellidoCliente() + "','" + this.getCorreoCliente()
                 + "')";
@@ -17,19 +17,16 @@ public class Clientes {
     }
     public String ModificarCliente() {
         ConexionClientes objmod = new ConexionClientes();
-        String cad = "update articulo set art_nom='"
-                + this.getNombreCliente() + "', cli_nom='"
-                + this.getApellidoCliente() + "', cli_apl='"
-                + this.getCodigoCliente() + "'where cli_cre='"
+        String cad = "update clientes set art_nom='"
+                + this.getNombreCliente() + "', cli_apl='"
+                + this.getApellidoCliente() + "', cli_cre='"
+                + this.getCorreoCliente() + "' where cod_cli='"
                 + this.getCodigoCliente() + "'";
         return objmod.Ejecutar(cad);
     }
     public String BuscarCliente() {
         ConexionClientes objmod = new ConexionClientes();
-        String cad = "select * ='"
-                + this.getNombreCliente() + "', cli_nom='"
-                + this.getApellidoCliente() + "', cli_apl='"
-                + this.getCodigoCliente() + "'where cli_cre='"
+        String cad = "select * from clientes where cli_cod='"
                 + this.getCodigoCliente() + "'";
         return objmod.Ejecutar(cad);
     }
