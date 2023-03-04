@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fb2048-8273-48eb-b60b-24ab2895ca33" name="Changes" comment="creando metodos de clase cliente... no se a terminado">
+    <list default="true" id="a9fb2048-8273-48eb-b60b-24ab2895ca33" name="Changes" comment="terminamos clientes y adelantamos productos falta agregar a factura">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarTheTapRoom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BarTheTapRoom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/ConexionClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conexion/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/ConexionDetalleFactura.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/ConexionEmpleados.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/ConexionProductos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conexion/ConexionVenta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/DetalleFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/DetalleFactura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Empleados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Productos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Venta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Venta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "271",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "70",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/cracm/Downloads/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar",
     "node.js.detected.package.eslint": "true",
@@ -78,7 +65,7 @@
       <workItem from="1677451054334" duration="308000" />
       <workItem from="1677543163279" duration="116000" />
       <workItem from="1677585812575" duration="4453000" />
-      <workItem from="1677961617224" duration="8533000" />
+      <workItem from="1677961617224" duration="8893000" />
     </task>
     <task id="LOCAL-00001" summary="prueba">
       <created>1677432352259</created>
@@ -108,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677586223652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="terminamos clientes y adelantamos productos falta agregar a factura">
+      <created>1677970587506</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677970587506</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +124,7 @@
     <MESSAGE value="creacion de las clases y realizacion de las respectivas conexiones a mysql" />
     <MESSAGE value="CREACION DE LAS VISTAS LOGIN Y VISTA BAR THE TAP ROOM" />
     <MESSAGE value="CLASE TOTAL Y SUBTOTAL" />
-    <option name="LAST_COMMIT_MESSAGE" value="CLASE TOTAL Y SUBTOTAL" />
+    <MESSAGE value="terminamos clientes y adelantamos productos falta agregar a factura" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminamos clientes y adelantamos productos falta agregar a factura" />
   </component>
 </project>
