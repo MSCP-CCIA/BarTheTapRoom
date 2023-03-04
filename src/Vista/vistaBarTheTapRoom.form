@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Vista.vistaBarTheTapRoom">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="11" column-count="16" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="vistaBarTheTapRoom" layout-manager="GridLayoutManager" row-count="11" column-count="16" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="1254" height="743"/>
@@ -32,7 +32,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="8d92" class="javax.swing.JTable" binding="table1" default-binding="true">
+          <component id="8d92" class="javax.swing.JTable" binding="tblDetalleVenta">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -289,7 +289,7 @@
               <text value="DESCRIPCION"/>
             </properties>
           </component>
-          <component id="c24cc" class="javax.swing.JTextField" binding="textField12" default-binding="true">
+          <component id="c24cc" class="javax.swing.JTextField" binding="descripcionProducto">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -305,7 +305,7 @@
               <text value="PRECIO"/>
             </properties>
           </component>
-          <component id="77e" class="javax.swing.JTextField" binding="textField13" default-binding="true">
+          <component id="77e" class="javax.swing.JTextField" binding="precioProducto">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -323,7 +323,7 @@
           <text value="CREAR CLIENTE"/>
         </properties>
       </component>
-      <component id="83da2" class="javax.swing.JButton" binding="buscar">
+      <component id="83da2" class="javax.swing.JButton" binding="buscarCliente">
         <constraints>
           <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -355,7 +355,7 @@
           <text value="COREGIR VENTA"/>
         </properties>
       </component>
-      <component id="84f01" class="javax.swing.JButton" binding="BUSCARPRODUCTOButton" default-binding="true">
+      <component id="84f01" class="javax.swing.JButton" binding="buscarProducto">
         <constraints>
           <grid row="4" column="14" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -363,15 +363,7 @@
           <text value="BUSCAR PRODUCTO"/>
         </properties>
       </component>
-      <component id="145b" class="javax.swing.JButton" binding="ADICIONARPRODUCTOButton" default-binding="true">
-        <constraints>
-          <grid row="6" column="13" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="ADICIONAR PRODUCTO"/>
-        </properties>
-      </component>
-      <component id="79dd8" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="79dd8" class="javax.swing.JTextField" binding="codigoProducto">
         <constraints>
           <grid row="4" column="13" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

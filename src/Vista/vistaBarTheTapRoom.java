@@ -1,18 +1,19 @@
 package Vista;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.ActionEvent;
 
-public class vistaBarTheTapRoom {
+public class vistaBarTheTapRoom extends javax.swing.JFrame {
     private JButton crearCliente;
-    private JButton buscar;
+    private JButton buscarCliente;
     private JButton modificarCliente;
     private JButton buacarVenta;
     private JButton adicionarVenta;
     private JButton corregirVenta;
-    private JButton BUSCARPRODUCTOButton;
-    private JButton ADICIONARPRODUCTOButton;
-    private JTable table1;
-    private JTextField textField1;
+    private JButton buscarProducto;
+    private JTable tblDetalleVenta;
+    private JTextField codigoProducto;
     private JTextField idCliente;
     private JTextField nombreCliente;
     private JTextField apellidoCliente;
@@ -23,6 +24,74 @@ public class vistaBarTheTapRoom {
     private JTextField total;
     private JTextField codigoEmpleado;
     private JTextField nombreEmpleado;
-    private JTextField textField12;
-    private JTextField textField13;
+    private JTextField descripcionProducto;
+    private JTextField precioProducto;
+    private JPanel vistaBarTheTapRoom;
+
+    public vistaBarTheTapRoom() {
+        setContentPane(vistaBarTheTapRoom);
+        setTitle("BarTheTapRoom");
+        setSize(1100, 500);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setVisible(true);
+        nombreEmpleado.setEnabled(false);
+        codigoEmpleado.setEnabled(false);
+    }
+
+    public void limpiarCajasClientes() {
+        this.idCliente.setText("");
+        this.nombreCliente.setText("");
+        this.apellidoCliente.setText("");
+        this.correoCliente.setText("");
+    }
+
+    public void limpiarCajasVentas() {
+        this.codigoVenta.setText("");
+        this.fechaVenta.setText("");
+        this.subTotal.setText("");
+        this.total.setText("");
+    }
+
+    public void limpiarCajasProductos() {
+        this.codigoProducto.setText("");
+        this.descripcionProducto.setText("");
+        this.precioProducto.setText("");
+    }
+
+    public void createTable() {
+        tblDetalleVenta.setModel(new DefaultTableModel(new Object[][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+        },
+                new String[] {
+                        "Codigo de producto", "Descripcion", "Cantidad", "Precio unitario"
+                }
+        ) {
+            boolean[] canEdit = new boolean[]{
+                    false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+        buscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                buscarClienteActionPerformed(evt);
+            }
+        });
+    }
+        private void buscarClienteActionPerformed(ActionEvent evt) {
+            
+        }
 }
