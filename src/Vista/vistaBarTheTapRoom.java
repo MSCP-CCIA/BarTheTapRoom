@@ -43,6 +43,18 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
 
             }
         });
+        crearCliente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        buscarCliente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public void limpiarCajasClientes() {
@@ -91,12 +103,6 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             }
         });
 
-        buscarCliente.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                buscarClienteActionPerformed(evt);
-            }
-        });
     }
         private void buscarClienteActionPerformed(ActionEvent evt) {
             
