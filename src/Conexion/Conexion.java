@@ -1,15 +1,13 @@
 package Conexion;
-
 import java.sql.*;
-
-public class ConexionProductos {
+public class Conexion {
     //Establecer conexion con base de datos
-    private final String url = "jdbc:mysql://localhost:3306/productos";
+    private final String url = "jdbc:mysql://localhost:3306/barthetaproom";
     private final String user = "root";
     private final String pwd = "";
 
     //Constructor
-    public ConexionProductos() {
+    public Conexion() {
     }
 
     public ResultSet Listar(String Cad) {
@@ -36,4 +34,5 @@ public class ConexionProductos {
             return "Error" + e.getMessage();
         }
     }
+
 }

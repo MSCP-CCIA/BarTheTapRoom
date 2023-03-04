@@ -1,6 +1,9 @@
 package LogicaDeNegocio;
 
-import Conexion.ConexionClientes;
+import Conexion.Conexion;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Clientes {
     private int codigoCliente;
@@ -8,7 +11,7 @@ public class Clientes {
     private String apellidoCliente;
     private String correoCliente;
     public String CrearCliente() {
-        ConexionClientes objmod = new ConexionClientes();
+        Conexion objmod = new Conexion();
         String cad = "insert into clientes values('"
                 + getCodigoCliente() + "','" + this.getNombreCliente()
                 + "','" + this.getApellidoCliente() + "','" + this.getCorreoCliente()
@@ -16,19 +19,31 @@ public class Clientes {
         return objmod.Ejecutar(cad);
     }
     public String ModificarCliente() {
-        ConexionClientes objmod = new ConexionClientes();
-        String cad = "update clientes set art_nom='"
+        Conexion objmod = new Conexion();
+        String cad = "update clientes set cli_nom='"
                 + this.getNombreCliente() + "', cli_apl='"
                 + this.getApellidoCliente() + "', cli_cre='"
-                + this.getCorreoCliente() + "' where cod_cli='"
+                + this.getCorreoCliente() + "' where cli_cod='"
                 + this.getCodigoCliente() + "'";
         return objmod.Ejecutar(cad);
     }
-    public String BuscarCliente() {
-        ConexionClientes objmod = new ConexionClientes();
-        String cad = "select * from clientes where cli_cod='"
-                + this.getCodigoCliente() + "'";
-        return objmod.Ejecutar(cad);
+    public Clientes BuscarCliente(int codigoClienteAbuscar) {
+        Clientes cliente = new Clientes();
+        try {
+            Conexion objmod = new Conexion();
+            ResultSet objeto = objmod.Listar("select * from clientes where cli_cod='"
+                    + codigoClienteAbuscar + "'");
+            while (objeto.next()){
+                cliente.setNombreCliente(objeto.getString("cli_nom"));
+                cliente.setApellidoCliente(objeto.getString("cli_apl"));
+                cliente.setCorreoCliente(objeto.getString("cli_cre"));
+            }
+
+        }
+        catch (SQLException e) {
+            javax.swing.JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        return cliente;
     }
 
     public int getCodigoCliente() {
