@@ -3,6 +3,7 @@ package Vista;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class vistaBarTheTapRoom extends javax.swing.JFrame {
     private JButton crearCliente;
@@ -36,6 +37,12 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         setVisible(true);
         nombreEmpleado.setEnabled(false);
         codigoEmpleado.setEnabled(false);
+        buacarVenta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public void limpiarCajasClientes() {
