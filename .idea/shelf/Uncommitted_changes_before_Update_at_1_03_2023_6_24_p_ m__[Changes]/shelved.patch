@@ -1,0 +1,14 @@
+Index: src/Conexion/conexionp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Conexion;\r\n\r\npublic class conexionp {\r\n}\r\n
+===================================================================
+diff --git a/src/Conexion/conexionp.java b/src/Conexion/conexionp.java
+--- a/src/Conexion/conexionp.java	
++++ b/src/Conexion/conexionp.java	
+@@ -1,4 +1,5 @@
+ package Conexion;
+ 
+ public class conexionp {
++    
+ }
