@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9fb2048-8273-48eb-b60b-24ab2895ca33" name="Changes" comment="terminamos clientes y adelantamos productos falta agregar a factura">
+    <list default="true" id="a9fb2048-8273-48eb-b60b-24ab2895ca33" name="Changes" comment="Todo el proyecto terminado, falta mostrar tabla">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarTheTapRoom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BarTheTapRoom.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Conexion/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conexion/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/CalcularTotalYSubTotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/CalcularTotalYSubTotal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/DetalleFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/DetalleFactura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Empleados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Productos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LogicaDeNegocio/Venta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicaDeNegocio/Venta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Login.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/vistaBarTheTapRoom.java" afterDir="false" />
     </list>
@@ -50,14 +43,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "295",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/cracm/OneDrive - Universidad Sergio Arboleda/UNIVERSIDAD SERGIO ARBOLEDA - CIENCIAS DE LA COMPUTACION E INTELIGENCIA ARTIFICIAL/TERCER SEMESTRE/ESTRUCTURAS DE DATOS LINEALES/BarTheTapRoom",
+    "last_opened_file_path": "C:/Users/r-fon/Downloads/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -122,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678053398172</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Todo el proyecto terminado, falta mostrar tabla">
+      <created>1678068885557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678068885557</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +145,7 @@
     <MESSAGE value="CREACION DE LAS VISTAS LOGIN Y VISTA BAR THE TAP ROOM" />
     <MESSAGE value="CLASE TOTAL Y SUBTOTAL" />
     <MESSAGE value="terminamos clientes y adelantamos productos falta agregar a factura" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminamos clientes y adelantamos productos falta agregar a factura" />
+    <MESSAGE value="Todo el proyecto terminado, falta mostrar tabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo el proyecto terminado, falta mostrar tabla" />
   </component>
 </project>

@@ -46,11 +46,7 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         setSize(2000, 800);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
-
-
-        ListarArticulos();
         tblDetalleVenta.setAutoCreateRowSorter(true);
-
         tblDetalleVenta.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{
                         {},
@@ -59,11 +55,10 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
                         {}
                 },
                 new String[]{
-
+                        "Codigo", "Nombre", "Cantidad", "Precio"
                 }
         ));
-
-
+        ListarArticulos();
         nombreEmpleado.setEnabled(false);
         codigoEmpleado.setEnabled(false);
         fechaVenta.setEnabled(false);
@@ -151,62 +146,59 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
 
     public void limpiarCajasProductos() {
         this.codigoProducto.setText("");
+        this.cantidadDeCompra.setText("");
         this.descripcionProducto.setText("");
         this.precioProducto.setText("");
     }
 
 
-
-
-    public void buscarClienteActionPerformed(java.awt.event.ActionEvent evt){
-        Clientes cliente =new Clientes();
-        Clientes clienteBuscado =new Clientes();
-        if(idCliente.getText().isEmpty()){
+    public void buscarClienteActionPerformed(java.awt.event.ActionEvent evt) {
+        Clientes cliente = new Clientes();
+        Clientes clienteBuscado = new Clientes();
+        if (idCliente.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "INGRESE UN ID VALIDO");
-        }
-        else {
+        } else {
             int id = Integer.valueOf(idCliente.getText());
             clienteBuscado = cliente.BuscarCliente(id);
-            if(clienteBuscado.getCodigoCliente()==0){
+            if (clienteBuscado.getCodigoCliente() == 0) {
                 JOptionPane.showMessageDialog(null, "INGRESE UN ID VALIDO");
-            }
-            else {
+            } else {
                 nombreCliente.setText(clienteBuscado.getNombreCliente());
                 apellidoCliente.setText(clienteBuscado.getApellidoCliente());
                 correoCliente.setText(clienteBuscado.getCorreoCliente());
             }
         }
     }
-    public void buscarProductoActionPerformed(java.awt.event.ActionEvent evt){
-        Productos producto =new Productos();
-        Productos productoBuscado =new Productos();
-        if(codigoProducto.getText().isEmpty()){
+
+    public void buscarProductoActionPerformed(java.awt.event.ActionEvent evt) {
+        Productos producto = new Productos();
+        Productos productoBuscado = new Productos();
+        if (codigoProducto.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "INGRESE UN CODIGO VALIDOFFFF");
-        }
-        else {
+        } else {
             int CodigoProducto = Integer.valueOf(codigoProducto.getText());
             productoBuscado = producto.BuscarProducto(CodigoProducto);
-            if(productoBuscado.getCodigoProducto()==0){
+            if (productoBuscado.getCodigoProducto() == 0) {
                 JOptionPane.showMessageDialog(null, "INGRESE UN ID VALIDO");
-            }else {
+            } else {
                 descripcionProducto.setText(productoBuscado.getDescripcionProducto());
                 precioProducto.setText(String.valueOf(productoBuscado.getPrecio()));
             }
 
         }
     }
-    public void buscarVentaActionPerformed(java.awt.event.ActionEvent evt){
-        Venta venta =new Venta();
-        Venta ventaBuscar =new Venta();
-        if(codigoVenta.getText().isEmpty()){
+
+    public void buscarVentaActionPerformed(java.awt.event.ActionEvent evt) {
+        Venta venta = new Venta();
+        Venta ventaBuscar = new Venta();
+        if (codigoVenta.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "INGRESE UN CODIGO VALIDO");
-        }
-        else {
+        } else {
             int CodigoVenta = Integer.valueOf(codigoVenta.getText());
             ventaBuscar = venta.BuscarVenta(CodigoVenta);
-            if(ventaBuscar.getCodigoVenta()==0){
+            if (ventaBuscar.getCodigoVenta() == 0) {
                 JOptionPane.showMessageDialog(null, "INGRESE UN ID VALIDO");
-            }else {
+            } else {
                 fechaVenta.setText(ventaBuscar.getFecha());
                 subTotal.setText(String.valueOf(ventaBuscar.getSubtotal()));
                 total.setText(String.valueOf(ventaBuscar.getTotal()));
@@ -214,15 +206,16 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
 
         }
     }
-    public void accionarEmpleado(int CodigoEmpleado, String NombreEmpleado){
+
+    public void accionarEmpleado(int CodigoEmpleado, String NombreEmpleado) {
         codigoEmpleado.setText(String.valueOf(CodigoEmpleado));
         nombreEmpleado.setText(NombreEmpleado);
     }
+
     public void CrearClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtGrabarActionPerformed
-        if(idCliente.getText().isEmpty()&&nombreCliente.getText().isEmpty()&&apellidoCliente.getText().isEmpty()&&correoCliente.getText().isEmpty()){
+        if (idCliente.getText().isEmpty() && nombreCliente.getText().isEmpty() && apellidoCliente.getText().isEmpty() && correoCliente.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "LLENE LOS CAMPOS");
-        }
-        else {
+        } else {
 
             Clientes objart = new Clientes();
             objart.setCodigoCliente(Integer.valueOf(this.idCliente.getText()));
@@ -233,11 +226,11 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, objart.CrearCliente());
         }
     }
-    public void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt){
-        if(idCliente.getText().isEmpty()&&nombreCliente.getText().isEmpty()&&apellidoCliente.getText().isEmpty()&&correoCliente.getText().isEmpty()){
+
+    public void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {
+        if (idCliente.getText().isEmpty() && nombreCliente.getText().isEmpty() && apellidoCliente.getText().isEmpty() && correoCliente.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "LLENE LOS CAMPOS");
-        }
-        else {
+        } else {
 
             Clientes objart = new Clientes();
             objart.setCodigoCliente(Integer.valueOf(this.idCliente.getText()));
@@ -247,40 +240,37 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, objart.ModificarCliente());
         }
     }
-    public void agregarAFacturaActionPerformed(java.awt.event.ActionEvent evt){
-        if(cantidadDeCompra.getText().isEmpty()){
+
+    public void agregarAFacturaActionPerformed(java.awt.event.ActionEvent evt) {
+        if (cantidadDeCompra.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "COLOQUE UNA CANTIDAD VALIDA");
-        }
-        else {
+        } else {
             DetalleFactura detalleFactura = new DetalleFactura();
             Productos productos = new Productos();
             Productos productosABuscar = new Productos();
             productosABuscar = productos.BuscarProducto(Integer.valueOf(codigoProducto.getText()));
-            if (Integer.valueOf(cantidadDeCompra.getText())>productosABuscar.getCantidad()){
+            if (Integer.valueOf(cantidadDeCompra.getText()) > productosABuscar.getCantidad()) {
                 JOptionPane.showMessageDialog(null, "NO HAY SUFICIENTE STOCK");
-            }
-            else {
-
+            } else {
                 detalleFactura.setCodigoProducto(Integer.valueOf(codigoProducto.getText()));
                 detalleFactura.setDescripcion(productosABuscar.getDescripcionProducto());
                 detalleFactura.setCantidadCompra(Integer.valueOf(cantidadDeCompra.getText()));
                 detalleFactura.setPrecio(productosABuscar.getPrecio());
                 JOptionPane.showMessageDialog(null, detalleFactura.agregarProductoFactura());
-
+                ListarArticulos();
             }
         }
     }
-    public void pagarActionPerformed(java.awt.event.ActionEvent evt){
+
+    public void pagarActionPerformed(java.awt.event.ActionEvent evt) {
         Venta venta = new Venta();
-        DetalleFactura detalleFactura =new DetalleFactura();
+        DetalleFactura detalleFactura = new DetalleFactura();
         Productos productos = new Productos();
         Productos productosABuscar = new Productos();
         productosABuscar = productos.BuscarProducto(Integer.valueOf(codigoProducto.getText()));
-        if(detalleFactura.detalleFactura().isEmpty()){
+        if (detalleFactura.detalleFactura().isEmpty()) {
             JOptionPane.showMessageDialog(null, "NO HA COMPRADO");
-        }
-        else {
-
+        } else {
             venta.setCodigoVenta((int) (Math.random() * 100000 + 999999));
             codigoVenta.setText(String.valueOf(venta.getCodigoVenta()));
             LocalDate fechaDeVenta = LocalDate.now();
@@ -292,7 +282,7 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             total.setText(String.valueOf(venta.getTotal()));
             JOptionPane.showMessageDialog(null, venta.CrearVenta());
             detalleFactura.eliminarFactura();
-            int reducir=productosABuscar.getCantidad()-Integer.valueOf(cantidadDeCompra.getText());
+            int reducir = productosABuscar.getCantidad() - Integer.valueOf(cantidadDeCompra.getText());
             productosABuscar.setCantidad(reducir);
             JOptionPane.showMessageDialog(null, productosABuscar.ModificarStock());
             limpiarCajasClientes();
@@ -300,9 +290,6 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             ListarArticulos();
         }
     }
-
-
-
 
 
     public void ListarArticulos() {
@@ -314,7 +301,8 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         tabla.addColumn("Descripción");
         tabla.addColumn("Unidades compradas");
         tabla.addColumn("Precio");
-
+        tabla.setColumnIdentifiers(new String[]{"Codigo", "Descripción", "Unidades compradas", "Precio"});
+        this.tblDetalleVenta.setModel(tabla);
         tabla.setRowCount(lista2.size());
         int i = 0;
         for (DetalleFactura x : lista2) {
@@ -322,9 +310,7 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             tabla.setValueAt(x.getDescripcion(), i, 1);
             tabla.setValueAt(x.getCantidadCompra(), i, 2);
             tabla.setValueAt(x.getPrecio(), i, 3);
-
             i++;
-
         }
         this.tblDetalleVenta.setModel(tabla);
     }

@@ -38,7 +38,10 @@
                 <preferred-size width="150" height="50"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <autoCreateRowSorter value="true"/>
+              <enabled value="true"/>
+            </properties>
           </component>
         </children>
       </grid>
