@@ -20,7 +20,7 @@ public class Clientes {
     }
     public String ModificarCliente() {
         Conexion objmod = new Conexion();
-        String cad = "update clientes set art_nom='"
+        String cad = "update clientes set cli_nom='"
                 + this.getNombreCliente() + "', cli_apl='"
                 + this.getApellidoCliente() + "', cli_cre='"
                 + this.getCorreoCliente() + "' where cli_cod='"

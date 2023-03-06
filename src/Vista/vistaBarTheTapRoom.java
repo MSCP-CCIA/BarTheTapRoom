@@ -46,6 +46,7 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         setSize(2000, 800);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
+        setLocationRelativeTo(null);
         tblDetalleVenta.setAutoCreateRowSorter(true);
         tblDetalleVenta.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{
@@ -216,13 +217,11 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         if (idCliente.getText().isEmpty() && nombreCliente.getText().isEmpty() && apellidoCliente.getText().isEmpty() && correoCliente.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "LLENE LOS CAMPOS");
         } else {
-
             Clientes objart = new Clientes();
             objart.setCodigoCliente(Integer.valueOf(this.idCliente.getText()));
             objart.setNombreCliente(this.nombreCliente.getText());
             objart.setApellidoCliente(this.apellidoCliente.getText());
             objart.setCorreoCliente(this.correoCliente.getText());
-            ;
             JOptionPane.showMessageDialog(null, objart.CrearCliente());
         }
     }
@@ -267,7 +266,7 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
         DetalleFactura detalleFactura = new DetalleFactura();
         Productos productos = new Productos();
         Productos productosABuscar = new Productos();
-        productosABuscar = productos.BuscarProducto(Integer.valueOf(codigoProducto.getText()));
+
         if (detalleFactura.detalleFactura().isEmpty()) {
             JOptionPane.showMessageDialog(null, "NO HA COMPRADO");
         } else {
@@ -281,10 +280,13 @@ public class vistaBarTheTapRoom extends javax.swing.JFrame {
             venta.setTotal(venta.total());
             total.setText(String.valueOf(venta.getTotal()));
             JOptionPane.showMessageDialog(null, venta.CrearVenta());
+            for(DetalleFactura i: detalleFactura.detalleFactura()) {
+                productosABuscar = productos.BuscarProducto(i.getCodigoProducto());
+                int reducir = productosABuscar.getCantidad() - Integer.valueOf(i.getCantidadCompra());
+                productosABuscar.setCantidad(reducir);
+                productosABuscar.ModificarStock();
+            }
             detalleFactura.eliminarFactura();
-            int reducir = productosABuscar.getCantidad() - Integer.valueOf(cantidadDeCompra.getText());
-            productosABuscar.setCantidad(reducir);
-            JOptionPane.showMessageDialog(null, productosABuscar.ModificarStock());
             limpiarCajasClientes();
             limpiarCajasProductos();
             ListarArticulos();
