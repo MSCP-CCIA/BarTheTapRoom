@@ -1,7 +1,7 @@
 package LogicaDeNegocio;
 
 public interface CalcularTotalYSubTotal {
-    public int IVA = 19;
-    public long total();
-    public long subTotal();
+    public double IVA = 0.19 ;
+    public double total();
+    public double subTotal();
 }

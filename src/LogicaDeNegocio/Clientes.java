@@ -20,7 +20,7 @@ public class Clientes {
     }
     public String ModificarCliente() {
         Conexion objmod = new Conexion();
-        String cad = "update clientes set cli_nom='"
+        String cad = "update clientes set art_nom='"
                 + this.getNombreCliente() + "', cli_apl='"
                 + this.getApellidoCliente() + "', cli_cre='"
                 + this.getCorreoCliente() + "' where cli_cod='"
@@ -34,6 +34,7 @@ public class Clientes {
             ResultSet objeto = objmod.Listar("select * from clientes where cli_cod='"
                     + codigoClienteAbuscar + "'");
             while (objeto.next()){
+                cliente.setCodigoCliente(objeto.getInt("cli_cod"));
                 cliente.setNombreCliente(objeto.getString("cli_nom"));
                 cliente.setApellidoCliente(objeto.getString("cli_apl"));
                 cliente.setCorreoCliente(objeto.getString("cli_cre"));

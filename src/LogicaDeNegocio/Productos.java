@@ -19,6 +19,8 @@ public class Productos {
             ResultSet objeto = objmod.Listar("select * from productos where prc_cod='"
                     + codigoProducto + "'");
             while (objeto.next()){
+                producto.setCodigoProducto(objeto.getInt("prc_cod"));
+                producto.setCantidad(objeto.getInt("prc_cnt"));
                 producto.setDescripcionProducto(objeto.getString("prc_des"));
                 producto.setPrecio(Integer.valueOf(objeto.getString("prc_pre")));
             }
@@ -27,6 +29,13 @@ public class Productos {
             javax.swing.JOptionPane.showMessageDialog(null, e.getMessage());
         }
         return producto;
+    }
+    public String ModificarStock() {
+        Conexion objmod = new Conexion();
+        String cad = "update productos set prc_cnt='"
+                + this.getCantidad() +  "' where prc_cod='"
+                + this.getCodigoProducto() + "'";
+        return objmod.Ejecutar(cad);
     }
 
     public int getCodigoProducto() {

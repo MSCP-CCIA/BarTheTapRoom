@@ -2,6 +2,9 @@ package LogicaDeNegocio;
 
 import Conexion.Conexion;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Empleados {
 
     private int codigoEmpleado;
@@ -11,12 +14,24 @@ public class Empleados {
     private String contraseñaEmpleado;
     private String cargoEmpleado;
 
-    public String BuscarEmpleado(){
-        Conexion objmod = new Conexion();
-        String cad = "select * from empleados where emp_cod='"
-                + this.getCodigoEmpleado() + "'";
+    public Empleados logearse(String correoEmpleado) {
+        Empleados empleado = new Empleados();
+        try {
+            Conexion objmod = new Conexion();
+            ResultSet objeto = objmod.Listar("select * from empleados where emp_cre='"
+                    + correoEmpleado + "'");
+            while (objeto.next()){
+                empleado.setCodigoEmpleado(Integer.valueOf(objeto.getString("emp_cod")));
+                empleado.setNombreEmpleado(objeto.getString("emp_nom"));
+                empleado.setContraseñaEmpleado(objeto.getString("emp_pass"));
+                empleado.setCorreoEmpleado(objeto.getString("emp_cre"));
+            }
 
-        return objmod.Ejecutar(cad);
+        }
+        catch (SQLException e) {
+            javax.swing.JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        return empleado;
     }
     public void setCodigoEmpleado(int codigoEmpleado) {
         this.codigoEmpleado = codigoEmpleado;
